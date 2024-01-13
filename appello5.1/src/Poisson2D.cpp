@@ -175,7 +175,7 @@ Poisson2D::assemble()
                                        * fe_values.shape_grad(j, q)     // (II)
                                        * fe_values.JxW(q);              // (III)
                 
-                  cell_matrix(i, j) += transport_coefficient.vector_value(
+                  cell_matrix(i, j) += transport_coefficient.value(
                                       fe_values.quadrature_point(q))  // beta(x)
                                       * fe_values.shape_grad(i, q)
                                       * fe_values.shape_value(j, q)

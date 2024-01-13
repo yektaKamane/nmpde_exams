@@ -73,13 +73,10 @@ public:
     {}
 
     // Evaluation.
-    virtual Tensor<1, dim>
-    vector_value(const Point<dim> & /*p*/, const unsigned int /*component*/ = 0) const
+    virtual double
+    value(const Point<dim> & /*p*/, const unsigned int /*component*/ = 0) const
     {
-      Tensor<1, dim> result;
-      result[0] = 1;
-      result[1] = 1;
-      return result;
+      return 1.0;
     }
   };
 
